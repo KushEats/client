@@ -1,0 +1,5 @@
+#map {
+  height:800px;
+}
+
+/* for mobile view, make sure to have border around map so user can scroll the browser and not be stuck on the map */
