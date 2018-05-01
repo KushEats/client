@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 
 <html>
-  <header>
-  </header>
-  <body>
-    <h1>hello world</h1>
+<head>
+  <link rel="stylesheet" href="styles/base.css">
+</head>
 
-  </body>
+<body>
+  <h1>hello world</h1>
 
+
+  <!-- <link rel="stylesheet" href="/maps/documentation/javascript/demos/demos.css"> -->
+  </head>
+
+  <div id="map"></div>
 
   <script>
+    function initMap() {
+      console.log('in init map');
+
+      // Create a map object and specify the DOM element for display.
+      var map = new google.maps.Map(document.getElementById('map'), {
+        center: { lat: -34.397, lng: 150.644 },
+        zoom: 8
+      });
+      console.log('map', map)
+    }
+
   </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGmy9E7atGXLPZqnePoz3JhlyeiHbHn4E&callback=initMap" async
+    defer></script>
 
+</body>
 
-  </html>
+</html>
