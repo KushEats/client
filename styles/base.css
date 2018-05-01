@@ -1,5 +1,20 @@
 #map {
-  height:800px;
+  height: 75%;
+  border: solid;
+  padding: 2em;
+  border-left: 3em;
 }
-
+/* Optional: Makes the sample page fill the window. */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  
+}
+img {
+  padding: 1em;
+  height: 8em;
+  
+}
 /* for mobile view, make sure to have border around map so user can scroll the browser and not be stuck on the map */
