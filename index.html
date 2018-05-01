@@ -27,6 +27,7 @@
   </head>
 
 <body>
+
   <header>
       <img src="img/Real-logo.png" alt="">
   </header>
@@ -39,39 +40,24 @@
   
   <script src="scripts/view/map-view.js"></script>
 
-  <div id="about-us" class="container"></div>
 
-  <!-- <script>
-    function initMap() {
-      console.log('in init map');
 
-      // Create a map object and specify the DOM element for display.
-      var map = new google.maps.Map(document.getElementById('map'), {
-        center: { lat: 47.608013, lng: -122.335167 },
-        zoom: 11
-      });
-      console.log('map', map)
-    }
-    function searchLocations() {
-         var address = document.getElementById("addressInput").value;
-         var geocoder = new google.maps.Geocoder();
-         geocoder.geocode({address: address}, function(results, status) {
-           if (status == google.maps.GeocoderStatus.OK) {
-            searchLocationsNear(results[0].geometry.location);
-           } else {
-             alert(address + ' not found');
-           }
-         });
-       }
 
-  </script> -->
 
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGmy9E7atGXLPZqnePoz3JhlyeiHbHn4E&callback=initMap" async defer></script>
   
   <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
-  
+  <script src="scripts/controller/routes.js"></script>
+  <script src="scripts/model/stores.js"></script>
+  <script src="scripts/view/about-view.js"></script>
+  <script src="scripts/view/error-view.js"></script>
+  <script src="scripts/view/home-view.js"></script>
+  <script src="scripts/view/map-view.js"></script>
+  <script src="scripts/view/about-view.js"></script>
+
+  <footer class="tag">Copyright &copy; 2018 Kush Eats</a></footer>
 </body>
 
 
