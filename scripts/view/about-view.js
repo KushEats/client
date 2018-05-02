@@ -1,23 +1,23 @@
-'use strict';
+// 'use strict';
 
-let aboutUs = [];
+// let aboutUs = [];
 
-function Us (opts) {
-  this.name = opts.name,
-  this.about = opts.about,
-  this.img = opts.img;
-};
+// function Us (opts) {
+//   this.name = opts.name,
+//   this.about = opts.about,
+//   this.img = opts.img;
+// };
 
-Us.prototype.toHtml = function() {
-  let source = $('#about-template').html();
-  let templateRender = Handlebars.compile(source);
-  return templateRender(this);
-};
+// Us.prototype.toHtml = function() {
+//   let source = $('#about-template').html();
+//   let templateRender = Handlebars.compile(source);
+//   return templateRender(this);
+// };
 
-aboutUsData.forEach(function(personObject) {
-  aboutUs.push(new Us(personObject));
-});
+// aboutUsData.forEach(function(personObject) {
+//   aboutUs.push(new Us(personObject));
+// });
 
-aboutUs.forEach(function(teamUs){
-  $('#about').append(teamUs.toHtml());
-});
+// aboutUs.forEach(function(teamUs){
+//   $('#about').append(teamUs.toHtml());
+// });

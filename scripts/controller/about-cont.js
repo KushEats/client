@@ -6,15 +6,15 @@ var app = app || {};
   const aboutController = {};
 
   aboutController.init = () => {
-    $('#about-logo').show();
+
     $('.container').hide();
+    $('#about-logo').show();
     $('#about-page').show();
-    $('#logo').hide()
-    $('#about1-title').hide();
-    $('#home1-btn').hide();
+    $('#nav-btn').show();
+    $('#nav-btn2').show();
   };
 
-  console.log('works')
+  console.log('works');
 
   module.aboutController = aboutController;
 

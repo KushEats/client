@@ -1,3 +1,5 @@
+'use strict';
+
 var app = app || {};
 
 (function(module) {
@@ -5,15 +7,14 @@ var app = app || {};
 
   mapController.init = () => {
 
-    $('#about-title').show();
-    $('#home-btn').show();
-    $('#about-page').hide();
-    $('#about-logo').hide();
-    $('#verify-window').hide();
-    
+    $('.container').hide();
+    $('#home-logo').show();
+    $('#map').show();
+    $('#nav-btn').show();
+    $('#nav-btn2').show();
   };
 
-  console.log('works')
+  console.log('works');
 
   module.mapController = mapController;
 
