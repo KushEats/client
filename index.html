@@ -13,34 +13,49 @@
   <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="styles/views.css">
 
-  <script id="about-templete" type="text/x-handlebars-template">
-      <div class="about-logo">
-        <nav>
-            <img src="img/about-us.png">
-        </nav>
-        <h2>{{name}}</h2>
-        <div>{{picurl}}</div>
-        <div class="description">{{description}}</div>
-        <div class="link">{{github}}</div>
-        <div class="link">{{linkedin}}</div>
-      </div>
+  <script id="about-template" type="text/x-handlebars-template">
+    
+            <article class="prof">
+                <header class="name">
+                  <h3>{{name}}</h3>
+                </header>
+                
+                <section>{{description}}</section>
+              </article>
 
     </script>
 </head>
 
 <body>
   <header>
-    <img src="img/Real-logo.png" alt="">
+    <img id="logo" src="img/Real-logo.png" alt="" >
+    <a href="/about" id="about1-title">About</a>
+    <a href="/" id="home1-btn" class="btns">Home</a>
   </header>
 
-
+  <section>
   <input id="pac-input" class="container" type="text" placeholder="Location or ZIP">
+  </section>
   <!-- <button>Submit</button> -->
 
 
-  <div id="map" class="container"></div>
+  <div id="map" class="container">
+     
+  </div>
+  
 
   <script src="scripts/view/map-view.js"></script>
+
+  
+    <section id="about-page" class="page-tab">
+        <img id="about-logo" src="img/about-us.png">
+      <a href="/about" id="about-title">About</a>
+      <a href="/" id="home-btn" class="btns">Home</a>
+      <div id="about">
+       
+      <h1>THE TEAM!</h1>
+      </div>
+    </section>
 
   <!-- Verify age popup -->
   <div id="verify-window" class="container">
@@ -65,15 +80,19 @@
 
   <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
-
+    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
-  <script src="scripts/controller/routes.js"></script>
+  <script src="scripts/view/home-view.js"></script>
   <script src="scripts/model/stores.js"></script>
+  <script src="scripts/controller/map-cont.js"></script>
+  <script src="scripts/controller/about-cont.js"></script>
   <script src="scripts/view/about-view.js"></script>
   <script src="scripts/view/error-view.js"></script>
-  <script src="scripts/view/home-view.js"></script>
+  <!-- <script src="scripts/view/home-view.js"></script> -->
   <script src="scripts/view/map-view.js"></script>
   <script src="scripts/view/about-view.js"></script>
+  <script src="scripts/controller/routes.js"></script>
+ 
 
 
   <footer class="tag">Copyright &copy; 2018 Kush Eats</a>
