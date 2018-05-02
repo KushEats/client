@@ -6,6 +6,7 @@
 //   this.name = opts.name,
 //   this.about = opts.about,
 //   this.img = opts.img;
+
 // };
 
 // Us.prototype.toHtml = function() {

@@ -10,6 +10,7 @@ var app = app || {};
     $('.container').hide();
     $('#about-logo').show();
     $('#about-page').show();
+
     $('#nav-btn').show();
     $('#nav-btn2').show();
   };
