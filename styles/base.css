@@ -38,6 +38,12 @@ h2 {
   color: black;
   text-shadow: -.5px 0 white, 0 .5px white, .5px 0 white, 0 -.5px white;
   margin-bottom: 1em;
+} 
+.nav { 
+align-self: center;
+transform : scale(1.05);
+color : greenyellow;
+font-size: 1.5em;
 }
 
 /* for mobile view, make sure to have border around map so user can scroll the browser and not be stuck on the map */

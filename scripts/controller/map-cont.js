@@ -8,6 +8,7 @@ var app = app || {};
   mapController.init = () => {
 
     $('.container').hide();
+    $('#pac-input').show();
     $('#home-logo').show();
     $('#map').show();
     $('#nav-btn').show();
