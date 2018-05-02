@@ -11,6 +11,10 @@ else {
   });
 
 
+  $('#under-21').on('click', function(e) {
+    e.preventDefault();
+    window.location.href = 'https://www.oldtimecandy.com/walk-the-candy-aisle/candy-cigarettes/'
+  });
 
   $('#over-21').on('click', function(e) {
     e.preventDefault();
@@ -18,8 +22,6 @@ else {
     location.reload();
     // $('.container').show();
     // $('#verify-window').hide();
-
-
   });
 }
 // var age = 26;
