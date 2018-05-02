@@ -9,10 +9,10 @@ var app = app || {};
 
     $('.container').hide();
     $('#about-page').show();
-    
+
   };
 
-  console.log('works')
+  console.log('works');
 
   module.aboutController = aboutController;
 

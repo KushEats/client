@@ -12,6 +12,12 @@ ENV.apiUrl = ENV.isProduction ? ENV.productionApiUrl : ENV.developmentApiUrl;
 
 (function (module) {
 
-
-
+  const Stores = {};
+  console.log(Stores);
+  Stores.searchResults = () => {
+    $.get(`${ENV.apiUrl}/api/v1/get_stores`)
+      .then(results => console.log(results))
+      .catch(error => console.log(error));
+  };
+  module.Stores.searchResults= Stores.searchResults;
 })(app);
