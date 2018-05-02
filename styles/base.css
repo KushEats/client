@@ -26,4 +26,13 @@ img {
   background-color: black;
   width: 100%;
 }
+
+h2 {
+  font-size: 100%;
+  font-family: sans-serif;
+  text-align: center;
+  color: black;
+  text-shadow: -.5px 0 white, 0 .5px white, .5px 0 white, 0 -.5px white;
+  margin-bottom: 1em;
+}
 /* for mobile view, make sure to have border around map so user can scroll the browser and not be stuck on the map */
