@@ -12,21 +12,19 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/views.css">
 
-    <script id="about-templete" type="text/x-handlebars-template">
-      <div class="about-logo">
-        <nav>
-            <img src="img/about-us.png">
-        </nav>
-        <h2>{{name}}</h2>
-        <div>{{picurl}}</div>
-        <div class="description">{{description}}</div>
-        <div class="link">{{github}}</div>
-        <div class="link">{{linkedin}}</div>
-      </div>
+    <script id="about-template" type="text/x-handlebars-template">
+      <article class="prof">
+          <header class="name">
+            <h3>{{{name}}}</h3>
+          </header>
+          
+          <section class="about-us">{{{description}}}</section>
+        </article>
     </script>
   </head>
 
 <body>
+  <section class="container">
   <header>
       <img src="img/Real-logo.png" alt="">
   </header>
@@ -34,12 +32,18 @@
   <input  class="controls" type="text" placeholder="Search Box">
   <button>Submit ASSHOLE</button>
   </form>
+  </section>
 
   <div id="map" class="container"></div>
   
   <script src="scripts/view/map-view.js"></script>
 
-  <div id="about-us" class="container"></div>
+  <section id="about-page" class="page-tab">
+    <a href="/about" id="about-title">About</a>
+    <a href="/" id="home-btn" class="btns">Home</a>
+    <div id="about"></div>
+    <h1>APPENDING ABOUT PAGE</h1>
+  </section>
 
   <!-- <script>
     function initMap() {
@@ -71,6 +75,11 @@
   <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
+  <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+  <script src="scripts/controller/about-cont.js"></script>
+  <script src="scripts/view/about-data.js"></script>
+  <script src="scripts/view/about-view.js"></script>
+  <script src="scripts/controller/routes.js"></script>  
   
 </body>
 
