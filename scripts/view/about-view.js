@@ -6,7 +6,8 @@
 //   this.name = opts.name,
 //   this.about = opts.about,
 //   this.img = opts.img;
-// }
+
+// };
 
 // Us.prototype.toHtml = function() {
 //   let source = $('#about-template').html();
@@ -14,9 +15,9 @@
 //   return templateRender(this);
 // };
 
-// // aboutUsData.forEach(function(personObject) {
-// //   aboutUs.push(new Us(personObject));
-// // });
+// aboutUsData.forEach(function(personObject) {
+//   aboutUs.push(new Us(personObject));
+// });
 
 // aboutUs.forEach(function(teamUs){
 //   $('#about').append(teamUs.toHtml());

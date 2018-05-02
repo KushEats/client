@@ -3,20 +3,19 @@
 var app = app || {};
 
 (function(module) {
-  const aboutController = {};
+  const mapController = {};
 
-  aboutController.init = () => {
+  mapController.init = () => {
 
     $('.container').hide();
-    $('#about-logo').show();
-    $('#about-page').show();
-
+    $('#home-logo').show();
+    $('#map').show();
     $('#nav-btn').show();
     $('#nav-btn2').show();
   };
 
   console.log('works');
 
-  module.aboutController = aboutController;
+  module.mapController = mapController;
 
 })(app);
