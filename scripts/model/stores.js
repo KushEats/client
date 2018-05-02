@@ -11,13 +11,20 @@ ENV.developmentApiUrl = 'http://localhost:3000';
 ENV.apiUrl = ENV.isProduction ? ENV.productionApiUrl : ENV.developmentApiUrl;
 
 (function (module) {
+  function Stores(rawStoreObject) {
+    Object.keys(rawStoreObject).forEach(key => this[key] = rawStoreObject[key]);
+  }
+  Stores.all = [];
 
-  const Stores = {};
-  console.log(Stores);
-  Stores.searchResults = () => {
+  Stores.loadAll = rows => rows.map(store => new Stores(store));
+
+  const searchStores = () => {
     $.get(`${ENV.apiUrl}/api/v1/get_stores`)
-      .then(results => console.log(results))
-      .catch(error => console.log(error));
+      .then(results => console.log(results, 'got Store!'))
+      .catch(error => console.log(error, 'dont got nothing'));
+    $.get(`${ENV.apiUrl}/api/v1/get_fast_food`)
+      .then(results => console.log(results, 'got Food!'))
+      .catch(error => console.log(error, 'dont got nothing'));
   };
-  module.Stores.searchResults= Stores.searchResults;
+  searchStores();
 })(app);
