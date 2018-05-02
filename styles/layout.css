@@ -34,3 +34,26 @@
     background-color: black;
     color: white;
 }
+
+/* About page layout */
+.column {
+    flex: 50%;
+    padding: 10px;
+}
+.row {
+    display: flex;
+}
+#about-pics {
+    width: 75%;
+    height: auto;
+    margin: 10px;
+}
+#about-page {
+    font-family: sans-serif;
+}
+#summary {
+    margin: 50px;
+}
+#blurb {
+    margin: 20px;
+}
