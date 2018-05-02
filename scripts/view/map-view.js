@@ -1,8 +1,7 @@
 'use strict';
 
 var map = {};
-var locations = [];
-
+// var locations = [];
 
 function initAutocomplete() {
   var map = new google.maps.Map(document.getElementById('map'), {
@@ -27,21 +26,24 @@ function initAutocomplete() {
   searchBox.addListener('places_changed', function () {
     var places = searchBox.getPlaces();
 
-    if (places.length == 0) {
+    if (places.length === 0) {
       return;
     }
 
     // Clear out the old markers.
+
     markers.forEach(function (marker) {
       marker.setMap(null);
     });
     markers = [];
 
+    console.log('inside map view', app.Stores.all);
+
     // For each place, get the icon, name and location.
     var bounds = new google.maps.LatLngBounds();
     places.forEach(function (place) {
       if (!place.geometry) {
-        console.log("Returned place contains no geometry");
+        console.log('Returned place contains no geometry');
         return;
       }
       var icon = {
@@ -52,13 +54,33 @@ function initAutocomplete() {
         scaledSize: new google.maps.Size(25, 25)
       };
 
+      // var coordinates = {
+      //   lat: bar.latitude,
+      //   lng: bar.longitude,
+      // };
+
+      // let lat= app.Stores.all[0].coordinates.latitude.value;
+      // let lng= app.Stores.all[0].coordinates.longitude.value;
+      // var coordinates = lat&&lng;
+
       // Create a marker for each place.
-      markers.push(new google.maps.Marker({
-        map: map,
-        icon: '../../img/resize-icon-v2.png',
+      let insertMapCoordinates = (i, iconUrl) => app.Stores.all[i].forEach(storeObj => markers.push(new google.maps.Marker({
+        icon: iconUrl,
         title: place.name,
-        position: place.geometry.location
-      }));
+        position: coordinates,
+        map: map,
+      })
+      )
+      );
+      insertMapCoordinates(0, '../../img/resize-icon-v2.png');
+      insertMapCoordinates(1, '../../img/resize-icon-v2.png');
+
+      // markers.push(new google.maps.Marker({
+      //   icon: '../../img/resize-icon-v2.png',
+      //   title: place.name,
+      //   position: storeObj.coordinates,
+      //   map: map,
+      // }));
 
       if (place.geometry.viewport) {
         // Only geocodes have viewport.
