@@ -55,7 +55,7 @@ function initAutocomplete() {
       // Create a marker for each place.
       markers.push(new google.maps.Marker({
         map: map,
-        icon: '../../img/weed-map-icon.png',
+        icon: '../../img/resize-icon-v2.png',
         title: place.name,
         position: place.geometry.location
       }));
