@@ -8,6 +8,7 @@ else {
   $(function(){
     $('.container').hide();
     $('#verify-window').css('display', 'block');
+    $('#home-logo').show();
   });
 
 
@@ -24,6 +25,21 @@ else {
     // $('#verify-window').hide();
   });
 }
-// var age = 26;
-// var canDrinkAlcohol = (age > 21) ? 'True, over 21' : 'False, under 21';
-// console.log(canDrinkAlcohol); // "True, over 21"
+// 'use strict';
+
+// var app = app || {};
+
+// (function(module) {
+//   const homeController = {};
+
+//   homeController.init = () => {
+
+//     $('.container').hide();
+//     $('#verify-window').css('display', 'block');
+//   };
+
+//   console.log('works');
+
+//   module.homeController = homeController;
+
+// })(app);
