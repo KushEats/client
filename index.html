@@ -1,16 +1,148 @@
 <!DOCTYPE html>
 
 <html>
-  <header>
+
+<head>
+  <title>Kush Eats</title>
+  <link rel="icon" href="img/resize-icon-v2.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/modules.css">
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/views.css">
+</head>
+
+<body class="home">
+  <!-- Nav for every page -->
+  <header class="site-header clearfix">
+      <section class="logo">
+          <img id="home-logo" class="container" src="img/Real-logo.png">
+            <h2>Your #1 source for munchie relief</h2>
+      </section>
+          <nav class="main-nav">
+            <!-- TODO: Add a hamburger menu icon here, which will show/hide depending on screen width (desktop vs. mobile). -->
+            <label class="icon-menu" content="\e902"></label>
+            <ul>
+              <li class="tab" data-content="home"><a href="/" id="nav-btn2">Home</a></li>
+              <li class="tab" data-content="about"><a href="/about" id="nav-btn">About</a></li>
+            </ul>
+          </nav>
   </header>
-  <body>
-    <h1>hello world</h1>
-
-  </body>
 
 
-  <script>
-  </script>
+
+  <!-- <nav class="main-nav">
+    <div class="header">
+      <img id="home-logo" class="container" src="img/Real-logo.png" alt="" >
+      <img id="about-logo" class="container" src="img/about-us.png">
+    </div>
+    <div class="nav">
+      <a href="/about" id="nav-btn" class="container">About</a>
+      <a href="/" id="nav-btn2" class="container">Home</a>
+    </div>
+  </nav> -->
+
+  <!-- Search bar container -->
+  <section>
+  <input id="pac-input" class="container" type="text" placeholder="Location or ZIP">
+  </section>
+  <!-- <button>Submit</button> -->
+
+   <!-- Verify age popup -->
+   <div id="verify-window" class="container">
+      <div class="verify-content">
+        <form id="verify-form">
+          <h2>ARE YOU OVER 21?</h2>
+            <button id="over-21" class="button">Yes</button>
+            <button id="under-21" class="button">No</button>
+      </div>
+    </div>
+
+  <!-- Map view -->
+  <div id="map" class="container"></div>
+
+  <!-- About view -->
+  <section id="about-page" class="container">
+      <div id="summary">
+        <h1>We are Kush Eats</h1>
+          <p id="blurb">blah blah blah combine cannabis and food blah blah kjbesebf fsenfisenifs sefuinseiunsef sefiunseifus seiufse siebfs seifs efisefjs eyse sueyf syuefseh fsefb</p>
+      </div>
+
+      <div id="names" class="row">
+        <div class="column">
+          <h3>Max</h3>
+            <p id="blurb">He is a cool dude who doesn't afraid of anything</p>
+        </div>
+        <div class="column">
+            <img id="about-pics" src="img/max.jpg">
+        </div>
+      </div>
+
+      <div id="names" class="row">
+        <div class="column">
+            <img id="about-pics" src="img/khaliil.jpg">
+        </div>
+        <div class="column">
+          <h3>Khalil</h3>
+            <p id="blurb">He is a cool dude who doesn't afraid of anything</p>
+        </div>
+      </div>
+        
+        <div id="names" class="row">
+        <div class="column">
+          <h3>Steph</h3>
+            <p id="blurb">He is a cool dude who doesn't afraid of anything</p>
+        </div>
+        <div class="column">
+            <img id="about-pics" src="img/steph.jpg">
+        </div>
+      </div>
+          
+      <div id="names" class="row">
+       
+        <div class="column">
+            <img id="about-pics" src="img/tim.jpg">
+        </div>
+        <div class="column">
+          <h3>Tim</h3>
+            <p id="blurb">He is a cool dude who doesn't afraid of anything</p>
+        </div>
+      </div>
+  </section>
+
+ 
+
+  <script src="scripts/view/map-view.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLlLO9AmKusj7eGw_rT8e2t7MYLROTG_I&libraries=places&callback=initAutocomplete"
+    async defer></script>
 
 
-  </html>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGmy9E7atGXLPZqnePoz3JhlyeiHbHn4E&callback=initMap" async
+    defer></script> -->
+
+
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
+
+  <script src="scripts/view/home-view.js"></script>
+  <script src="scripts/model/stores.js"></script>
+  <script src="scripts/controller/map-cont.js"></script>
+  <script src="scripts/controller/about-cont.js"></script>
+  <script src="scripts/view/about-view.js"></script>
+  <script src="scripts/view/error-view.js"></script>
+  <!-- <script src="scripts/view/home-view.js"></script> -->
+  <script src="scripts/view/map-view.js"></script>
+  <script src="scripts/view/about-view.js"></script>
+  <script src="scripts/controller/routes.js"></script>
+
+  <footer class="tag">Copyright &copy; 2018 Kush Eats</a>
+  </footer>
+
+</body>
+
+</html>
