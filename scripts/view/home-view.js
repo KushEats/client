@@ -7,6 +7,7 @@ else {
 
   $(function(){
     $('.container').hide();
+    $('.main-nav').hide();
     $('#verify-window').css('display', 'block');
     $('#home-logo').show();
   });
