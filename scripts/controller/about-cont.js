@@ -8,9 +8,8 @@ var app = app || {};
   aboutController.init = () => {
 
     $('.container').hide();
-    $('#about-logo').show();
+    $('#home-logo').show();
     $('#about-page').show();
-
     $('#nav-btn').show();
     $('#nav-btn2').show();
   };
