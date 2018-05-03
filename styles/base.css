@@ -1,0 +1,32 @@
+#map {
+  height: 75%;
+  border: 1px solid;
+  padding: 2em;
+  margin: 30px;
+  margin-top: 10px;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.tag {
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  color: white;
+  background-color: black;
+  width: 100%;
+}
+
+h1 {
+  font-size: 100%;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  color: black;
+  text-shadow: -.5px 0 white, 0 .5px white, .5px 0 white, 0 -.5px white;
+  margin-bottom: 1em;
+} 
