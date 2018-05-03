@@ -101,6 +101,25 @@ img {
    text-align: left;
    margin-left: 20px;
 }
+/* @media screen and (max-width: 768px) {
+        .main-nav {
+            visibility: hidden;
+            
+        }
+        .icon-menu {
+            visibility: visible;
+            float: right;
+            
+        }
+    }
+@media screen and (min-width: 768px) {
+    .icon-menu {
+        visibility: hidden;
+        
+        
+    }
+} */
+
 ul {
     list-style-type: none;
     margin: 0;
