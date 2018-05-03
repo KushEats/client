@@ -12,8 +12,6 @@
   <link rel="stylesheet" href="styles/layout.css">
   <link rel="stylesheet" href="styles/modules.css">
   <link rel="stylesheet" href="styles/reset.css">
-  <link rel="stylesheet" href="styles/style.css">
-  <link rel="stylesheet" href="styles/views.css">
 </head>
 
 <body class="home"></body>
@@ -23,7 +21,6 @@
           <img id="home-logo" class="container" src="img/Real-logo.png">
             <h2>&ensp;Your #1 source for munchie relief</h2>
             <nav class="main-nav">
-                <!-- <label class="icon-menu" content="\e902"><img src="img/Hamburger_icon.svg.png"></label> -->
               <ul>
                 <li class="tab" data-content="home"><a href="/" id="nav-btn2">Home</a></li>
                 <li class="tab" data-content="about"><a href="/about" id="nav-btn">About</a></li>
@@ -32,19 +29,6 @@
       </section>
          
   </header>
-
-
-
-  <!-- <nav class="main-nav">
-    <div class="header">
-      <img id="home-logo" class="container" src="img/Real-logo.png" alt="" >
-      <img id="about-logo" class="container" src="img/about-us.png">
-    </div>
-    <div class="nav">
-      <a href="/about" id="nav-btn" class="container">About</a>
-      <a href="/" id="nav-btn2" class="container">Home</a>
-    </div>
-  </nav> -->
 
   <!-- Search bar container -->
   <section>
@@ -73,7 +57,7 @@
       </div>
 
       <div id="names" class="row">
-        <div class="column">
+        <div class="column" id="left-column">
           <h3>Max</h3>
             <p id="blurb">An up and coming software engineer with a couple years of experience in the tech industry as a software QA tester, but now I'm branching into the exciting world of development.</p>
         </div>
@@ -120,11 +104,6 @@
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLlLO9AmKusj7eGw_rT8e2t7MYLROTG_I&libraries=places&callback=initAutocomplete"
     async defer></script>
 
-
-  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGmy9E7atGXLPZqnePoz3JhlyeiHbHn4E&callback=initMap" async
-    defer></script> -->
-
-
   <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
@@ -134,11 +113,8 @@
   <script src="scripts/model/stores.js"></script>
   <script src="scripts/controller/map-cont.js"></script>
   <script src="scripts/controller/about-cont.js"></script>
-  <script src="scripts/view/about-view.js"></script>
   <script src="scripts/view/error-view.js"></script>
-  <!-- <script src="scripts/view/home-view.js"></script> -->
   <script src="scripts/view/map-view.js"></script>
-  <script src="scripts/view/about-view.js"></script>
   <script src="scripts/controller/routes.js"></script>
 
   <footer class="tag">Copyright &copy; 2018 Kush Eats</a>
