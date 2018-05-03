@@ -1,7 +1,6 @@
-
 // Show verify popup on page load
 if (localStorage.getItem('over 21', true)) {
-
+  //continue rendering the page
 }
 else {
 

@@ -56,22 +56,20 @@ function initAutocomplete() {
 
       // Create a marker for each place.
       let insertMapCoordinates = (i, iconUrl) => app.Stores.all[i].forEach(storeObj => {
-        console.log(storeObj, 'bleeeech');
         var coordinated = {
           lat: storeObj.coordinates.latitude,
           lng: storeObj.coordinates.longitude,
         };
-        console.log('coordinated: ', coordinated);
         markers.push(new google.maps.Marker({
           icon: iconUrl,
-          title: place.name,
+          title: storeObj.name,
           position: coordinated,
           map: map,
         })
         );
       }
       );
-      insertMapCoordinates(0, '../../img/resize-icon-v2.png');
+      insertMapCoordinates(0, '../../img/resized-icon.png');
       insertMapCoordinates(1, '../../img/food-icon-resize.png');
 
       if (place.geometry.viewport) {
@@ -81,12 +79,13 @@ function initAutocomplete() {
         bounds.extend(place.geometry.location);
       }
     });
-    let infoWindow = new google.maps.InfoWindow({
-      content: '<h1>content</h1>'
-    });
 
     markers.forEach(marker => {
       marker.addListener('click', function () {
+        console.log(this);
+        let infoWindow = new google.maps.InfoWindow({
+          content: `<h1>${this.title}</h1>`
+        });
         infoWindow.open(map, marker);
       });
     });
@@ -94,4 +93,3 @@ function initAutocomplete() {
     map.fitBounds(bounds);
   });
 }
-
