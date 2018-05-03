@@ -36,7 +36,6 @@ ENV.apiUrl = ENV.isProduction ? ENV.productionApiUrl : ENV.developmentApiUrl;
       })
       .catch(error => console.log(error, 'dont got nothing'));
   };
-  // console.log(Stores.all);
   searchStores();
 
   module.Stores = Stores;

@@ -5,18 +5,13 @@
   margin: 30px;
   margin-top: 10px;
 }
-/* Optional: Makes the sample page fill the window. */
+
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  
 }
-/* img {
-  padding: 1em;
-  height: 8em;
-  
-} */
+
 .tag {
   text-align: center;
   position: fixed;
@@ -35,18 +30,3 @@ h1 {
   text-shadow: -.5px 0 white, 0 .5px white, .5px 0 white, 0 -.5px white;
   margin-bottom: 1em;
 } 
-
-/* .nav { 
-align-self: center;
-transform : scale(1.05);
-color : greenyellow;
-font-size: 1.5em;
-margin: 20px;
-} */
-
-/* .site-header {
-  display: block;
-  position: fixed;
-  
-} */
-/* for mobile view, make sure to have border around map so user can scroll the browser and not be stuck on the map */

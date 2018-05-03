@@ -9,10 +9,9 @@ var app = app || {};
 
     $('.container').hide();
     $('#verify-window').css('display', 'block');
-    
   };
 
-  console.log('works')
+  console.log('works');
 
   module.homeController = homeController;
 
