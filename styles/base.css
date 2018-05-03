@@ -1,6 +1,6 @@
 #map {
   height: 75%;
-  border: solid;
+  border: 1px solid;
   padding: 2em;
   margin: 30px;
   margin-top: 10px;
@@ -35,9 +35,6 @@ h1 {
   text-shadow: -.5px 0 white, 0 .5px white, .5px 0 white, 0 -.5px white;
   margin-bottom: 1em;
 } 
-h3 {
-  font-family: 'Quicksand', sans-serif;
-}
 
 /* .nav { 
 align-self: center;
