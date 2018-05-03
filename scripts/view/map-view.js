@@ -63,6 +63,7 @@ function initAutocomplete() {
         markers.push(new google.maps.Marker({
           icon: iconUrl,
           title: storeObj.name,
+          url: storeObj.url,
           position: coordinated,
           map: map,
         })
@@ -82,9 +83,8 @@ function initAutocomplete() {
 
     markers.forEach(marker => {
       marker.addListener('click', function () {
-        console.log(this);
         let infoWindow = new google.maps.InfoWindow({
-          content: `<h1>${this.title}</h1>`
+          content: `<a href="${this.url}" target="_blank">${this.title}</a>`
         });
         infoWindow.open(map, marker);
       });
