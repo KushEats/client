@@ -1,8 +1,7 @@
 'use strict';
 
 var map = {};
-var locations = [];
-
+// var locations = [];
 
 function initAutocomplete() {
   var map = new google.maps.Map(document.getElementById('map'), {
@@ -27,21 +26,24 @@ function initAutocomplete() {
   searchBox.addListener('places_changed', function () {
     var places = searchBox.getPlaces();
 
-    if (places.length == 0) {
+    if (places.length === 0) {
       return;
     }
 
     // Clear out the old markers.
+
     markers.forEach(function (marker) {
       marker.setMap(null);
     });
     markers = [];
 
+    console.log('inside map view', app.Stores.all);
+
     // For each place, get the icon, name and location.
     var bounds = new google.maps.LatLngBounds();
     places.forEach(function (place) {
       if (!place.geometry) {
-        console.log("Returned place contains no geometry");
+        console.log('Returned place contains no geometry');
         return;
       }
       var icon = {
@@ -53,12 +55,23 @@ function initAutocomplete() {
       };
 
       // Create a marker for each place.
-      markers.push(new google.maps.Marker({
-        map: map,
-        icon: '../../img/resize-icon-v2.png',
-        title: place.name,
-        position: place.geometry.location
-      }));
+      let insertMapCoordinates = (i, iconUrl) => app.Stores.all[i].forEach(storeObj => {
+        var coordinated = {
+          lat: storeObj.coordinates.latitude,
+          lng: storeObj.coordinates.longitude,
+        };
+        markers.push(new google.maps.Marker({
+          icon: iconUrl,
+          title: storeObj.name,
+          url: storeObj.url,
+          position: coordinated,
+          map: map,
+        })
+        );
+      }
+      );
+      insertMapCoordinates(0, '../../img/resized-icon.png');
+      insertMapCoordinates(1, '../../img/food-icon-resize.png');
 
       if (place.geometry.viewport) {
         // Only geocodes have viewport.
@@ -67,12 +80,12 @@ function initAutocomplete() {
         bounds.extend(place.geometry.location);
       }
     });
-    let infoWindow = new google.maps.InfoWindow({
-      content: '<h1>content</h1>'
-    });
 
     markers.forEach(marker => {
       marker.addListener('click', function () {
+        let infoWindow = new google.maps.InfoWindow({
+          content: `<a href="${this.url}" target="_blank">${this.title}</a>`
+        });
         infoWindow.open(map, marker);
       });
     });
@@ -80,21 +93,3 @@ function initAutocomplete() {
     map.fitBounds(bounds);
   });
 }
-
-
-
-
-
-
-
-
-
-
-// function initMap() {
-//   //Some of the code syntax used was given by the google maps API website.
-//   map = new google.maps.Map(document.getElementById('map'), {
-//     center: { lat: 47.608013, lng: -122.335167 },
-//     zoom: 12,
-//     mapTypeId: 'roadmap'
-//   });
-// }
