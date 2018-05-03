@@ -54,26 +54,25 @@ function initAutocomplete() {
         scaledSize: new google.maps.Size(25, 25)
       };
 
-      // var coordinates = {
-      //   lat: bar.latitude,
-      //   lng: bar.longitude,
-      // };
-
-      // let lat= app.Stores.all[0].coordinates.latitude.value;
-      // let lng= app.Stores.all[0].coordinates.longitude.value;
-      // var coordinates = lat&&lng;
-
       // Create a marker for each place.
-      let insertMapCoordinates = (i, iconUrl) => app.Stores.all[i].forEach(storeObj => markers.push(new google.maps.Marker({
-        icon: iconUrl,
-        title: place.name,
-        position: coordinates,
-        map: map,
-      })
-      )
+      let insertMapCoordinates = (i, iconUrl) => app.Stores.all[i].forEach(storeObj => {
+        console.log(storeObj, 'bleeeech');
+        var coordinated = {
+          lat: storeObj.coordinates.latitude,
+          lng: storeObj.coordinates.longitude,
+        };
+        console.log('coordinated: ', coordinated);
+        markers.push(new google.maps.Marker({
+          icon: iconUrl,
+          title: place.name,
+          position: coordinated,
+          map: map,
+        })
+        );
+      }
       );
       insertMapCoordinates(0, '../../img/resize-icon-v2.png');
-      insertMapCoordinates(1, '../../img/resize-icon-v2.png');
+      insertMapCoordinates(1, '../../img/food-icon-resize.png');
 
       // markers.push(new google.maps.Marker({
       //   icon: '../../img/resize-icon-v2.png',
