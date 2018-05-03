@@ -69,7 +69,7 @@ function initAutocomplete() {
         );
       }
       );
-      insertMapCoordinates(0, '../../img/resize-icon-v2.png');
+      insertMapCoordinates(0, '../../img/resized-icon.png');
       insertMapCoordinates(1, '../../img/food-icon-resize.png');
 
       if (place.geometry.viewport) {
@@ -79,12 +79,25 @@ function initAutocomplete() {
         bounds.extend(place.geometry.location);
       }
     });
-    let infoWindow = new google.maps.InfoWindow({
-      content: '<h1>content</h1>'
-    });
+
+    // let infoWindow = () => {
+    //   app.Stores.all.map(store => {
+    //     new google.maps.InfoWindow({
+    //       content: `<h1>${store.name}</h1>`
+    //     });
+    //   });
+    // };
+    // let infoWindow = new google.maps.InfoWindow({
+    //   content: `<h1>${app.Stores.all[i].name}</h1>`
+    // });
 
     markers.forEach(marker => {
       marker.addListener('click', function () {
+        console.log(this);
+        let infoWindow = new google.maps.InfoWindow({
+          content: `<h1>${this.title}</h1>` + `<h1>${this.url}</h1>`
+        });
+        // infoWindow.close();
         infoWindow.open(map, marker);
       });
     });
