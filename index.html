@@ -15,16 +15,35 @@
   <link rel="stylesheet" href="styles/views.css">
 </head>
 
-<body>
-  <!-- Header and nav for every page -->
-  <header>
-    <img id="home-logo" class="container" src="img/Real-logo.png" alt="" >
-    <img id="about-logo" class="container" src="img/about-us.png">
-    <div class="nav">
-    <a href="/about" id="nav-btn" class="container">About</a>
-    <a href="/" id="nav-btn2" class="container">Home</a>
-    </div>
+<body class="home">
+  <!-- Nav for every page -->
+  <header class="site-header clearfix">
+      <section class="logo">
+          <img id="home-logo" class="container" src="img/Real-logo.png">
+            <h2>Your #1 source for munchie relief</h2>
+      </section>
+          <nav class="main-nav">
+            <!-- TODO: Add a hamburger menu icon here, which will show/hide depending on screen width (desktop vs. mobile). -->
+            <label class="icon-menu" content="\e902"></label>
+            <ul>
+              <li class="tab" data-content="home"><a href="/" id="nav-btn2">Home</a></li>
+              <li class="tab" data-content="about"><a href="/about" id="nav-btn">About</a></li>
+            </ul>
+          </nav>
   </header>
+
+
+
+  <!-- <nav class="main-nav">
+    <div class="header">
+      <img id="home-logo" class="container" src="img/Real-logo.png" alt="" >
+      <img id="about-logo" class="container" src="img/about-us.png">
+    </div>
+    <div class="nav">
+      <a href="/about" id="nav-btn" class="container">About</a>
+      <a href="/" id="nav-btn2" class="container">Home</a>
+    </div>
+  </nav> -->
 
   <!-- Search bar container -->
   <section>

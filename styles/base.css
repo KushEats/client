@@ -12,11 +12,11 @@ html, body {
   text-align: center;
   
 }
-img {
+/* img {
   padding: 1em;
   height: 8em;
   
-}
+} */
 .tag {
   text-align: center;
   position: fixed;
@@ -25,13 +25,9 @@ img {
   color: white;
   background-color: black;
   width: 100%;
-} 
-#about-page {
-  text-align: center;
 }
 
-
-h2 {
+h1, h2 {
   font-size: 100%;
   font-family: sans-serif;
   text-align: center;
@@ -44,6 +40,10 @@ align-self: center;
 transform : scale(1.05);
 color : greenyellow;
 font-size: 1.5em;
+margin: 20px;
 }
 
+.home {
+  
+}
 /* for mobile view, make sure to have border around map so user can scroll the browser and not be stuck on the map */
