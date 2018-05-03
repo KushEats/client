@@ -7,6 +7,7 @@
   <link rel="icon" href="img/resize-icon-v2.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald|Quicksand" rel="stylesheet">
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/layout.css">
   <link rel="stylesheet" href="styles/modules.css">
@@ -15,21 +16,22 @@
   <link rel="stylesheet" href="styles/views.css">
 </head>
 
-<body class="home">
+<body class="home"></body>
   <!-- Nav for every page -->
-  <header class="site-header clearfix">
+  <header class="site-header">
       <section class="logo">
           <img id="home-logo" class="container" src="img/Real-logo.png">
-            <h2>Your #1 source for munchie relief</h2>
+            <h2>&ensp;Your #1 source for munchie relief</h2>
+            <nav class="main-nav">
+              <!-- TODO: Add a hamburger menu icon here, which will show/hide depending on screen width (desktop vs. mobile). -->
+              <label class="icon-menu" content="\e902"></label>
+              <ul>
+                <li class="tab" data-content="home"><a href="/" id="nav-btn2">Home</a></li>
+                <li class="tab" data-content="about"><a href="/about" id="nav-btn">About</a></li>
+              </ul>
+            </nav>
       </section>
-          <nav class="main-nav">
-            <!-- TODO: Add a hamburger menu icon here, which will show/hide depending on screen width (desktop vs. mobile). -->
-            <label class="icon-menu" content="\e902"></label>
-            <ul>
-              <li class="tab" data-content="home"><a href="/" id="nav-btn2">Home</a></li>
-              <li class="tab" data-content="about"><a href="/about" id="nav-btn">About</a></li>
-            </ul>
-          </nav>
+         
   </header>
 
 
