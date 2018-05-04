@@ -13,11 +13,12 @@ html, body {
   padding: 0;
 }
 #pac-input {
-  font-size: 12px;
+  font-size: 15px;
+  text-align: center;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 10%;
+  min-width: 10%;
   padding: 12px 20px;
   /* margin: 8px 0; */
 }
