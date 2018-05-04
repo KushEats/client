@@ -14,7 +14,6 @@ var app = app || {};
     $('#nav-btn2').show();
   };
 
-  console.log('works');
 
   module.aboutController = aboutController;
 

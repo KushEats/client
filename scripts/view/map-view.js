@@ -83,7 +83,7 @@ function initAutocomplete() {
     markers.forEach(marker => {
       marker.addListener('click', function () {
         let infoWindow = new google.maps.InfoWindow({
-          content: `<a href="${this.url}" target="_blank">${this.title}</a>`
+          content: `<a class ="infoWindow" href="${this.url}" target="_blank">${this.title}</a>`
         });
         infoWindow.open(map, marker);
       });
