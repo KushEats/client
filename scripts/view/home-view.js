@@ -11,7 +11,6 @@ else {
     $('#home-logo').show();
   });
 
-
   $('#under-21').on('click', function(e) {
     e.preventDefault();
     window.location.href = 'https://www.oldtimecandy.com/walk-the-candy-aisle/candy-cigarettes/';
