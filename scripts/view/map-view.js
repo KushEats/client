@@ -69,8 +69,8 @@ function initAutocomplete() {
         );
       }
       );
-      insertMapCoordinates(0, '../../img/resized-icon.png');
-      insertMapCoordinates(1, '../../img/food-icon-resize.png');
+      insertMapCoordinates(0, '../../client/img/resized-icon.png');
+      insertMapCoordinates(1, '../../client/img/food-icon-resize.png');
 
       if (place.geometry.viewport) {
         // Only geocodes have viewport.
