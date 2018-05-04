@@ -69,8 +69,8 @@ function initAutocomplete() {
         );
       }
       );
-      insertMapCoordinates(0, '../../img/resized-icon.png');
-      insertMapCoordinates(1, '../../img/food-icon-resize.png');
+      insertMapCoordinates(0, '../../client/img/resized-icon.png');
+      insertMapCoordinates(1, '../../client/img/food-icon-resize.png');
 
       if (place.geometry.viewport) {
         // Only geocodes have viewport.
@@ -83,7 +83,7 @@ function initAutocomplete() {
     markers.forEach(marker => {
       marker.addListener('click', function () {
         let infoWindow = new google.maps.InfoWindow({
-          content: `<a href="${this.url}" target="_blank">${this.title}</a>`
+          content: `<a class ="infoWindow" href="${this.url}" target="_blank">${this.title}</a>`
         });
         infoWindow.open(map, marker);
       });
